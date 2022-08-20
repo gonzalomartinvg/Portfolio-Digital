@@ -1,0 +1,108 @@
+body {
+    background-color: black;}
+
+.informacion-superior-izquierda a{ /*Agregando la "a" estamos indicando que las propiedades se las aplique al elemento "a" dentro del div". Si no
+    hacemos esto no funciona*/
+    color: white;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif; /*Se indica que use Poppins, pero en el caso de que no este disponible, que use Sans-Serif*/
+    font-weight: 600;
+    font-size: 100%;
+}
+
+.contacto-superior-derecho a{
+    color: white;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    font-size: 100%;
+}
+
+.background-header img{ /*Al indicarle 100%, le estamos diciendo que ocupé el 100% del contenedor en el que está inmerso. En este caso, va a ocupar
+    el 100% de las columnas y filas del contenedor que le especificamos en el archivo GRID.css*/
+    width: 100%;
+    height: 100%;
+}
+
+.encabezado {
+    color: white;
+    font-size: 200%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main .imagencircular img {
+    width:150px;
+    height:150px; 
+    margin: auto;
+    display: table;
+}
+
+.aptitudes p {
+    margin: auto;
+    display:table; 
+    color:white; 
+    background-color:#8700A3; 
+    font-family:'Poppins', sans-serif;
+    font-weight: 600;
+    font-style: italic; 
+    
+}
+
+/* En el código de abajo, le indico a los elemenos de los DIV ".boton-whatsapp" y "boton-mail" creado en HTML que al clickear en un botón va a ser de una forma, 
+pero cuando pase el cursor de otra*/ 
+
+.boton-whatsapp a:link, a:visited {
+    margin: 5px; 
+    padding: 10px 10px;
+    background-color: white;
+    color: black;
+    border: 1px solid white; 
+    text-decoration: none; 
+    font-family: poppins; 
+    box-shadow: 3px 3px 3px black;
+}
+.boton-whatsapp a:hover, a:active {
+    background-color: #c9c8c9;
+}
+
+.boton-mail a:link, a:visited {
+    margin: 5px; 
+    padding: 10px 10px; 
+    background-color: white; 
+    color: black; 
+    text-decoration: none; 
+    font-family: poppins; 
+    box-shadow: 3px 3px 3px black;
+}
+.boton-mail a:hover, a:active {
+  background-color: #c9c8c9;
+}
+
+.titulo-diseno-ux-ui p{
+    width: fit-content; /*Con esto le indicamos que el background solo vaya hasta donde va el texto*/
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 130%;
+    font-weight: 600;
+    background-color: #8700A3;
+}
+
+.titulo-produccion-audiovisual p {
+    width: fit-content; /*Con esto le indicamos que el background solo vaya hasta donde va el texto*/
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 130%;
+    font-weight: 600;
+    background-color: #8700A3;
+}
+
+.contenedor-footer .iconos-redes img {
+    width: 130%;
+    height: 130%;
+}
+
+.contenedor-footer p{
+    font-size: 93%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}

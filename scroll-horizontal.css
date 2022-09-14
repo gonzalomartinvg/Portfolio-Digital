@@ -6,7 +6,7 @@ e indicarle desde el archivo de GRID.CSS donde se va a ubicar dentro de la grill
 .wrapper-1{ /*Esta es una GRID que posee la información del contenedor de tarjetas, no de las tarjetas ni de sus elementos.*/
     height: 510px; /*Le damos un tamaño para que entre todo el contenido de dentro*/
     display: grid; /*Le indicamos que es una Grid*/
-    grid-template-columns: repeat(3, 320px); /*Le decimos que son 2 elementos de 320px cada uno, si queremos agregar más tarjetas, debemos
+    grid-template-columns: repeat(4, 320px); /*Le decimos que son 2 elementos de 320px cada uno, si queremos agregar más tarjetas, debemos
     aumentar la cantidad de elementos*/
     overflow-x: auto; /*Le indicamos el scroll horizontal*/
 
@@ -22,6 +22,8 @@ e indicarle desde el archivo de GRID.CSS donde se va a ubicar dentro de la grill
 
 }
 .tarjetas { /*Esta es una SUB-GRID con la información de las tarjetas, no de sus elementos*/
+    background-image: url(img/tarjetas/fondo-tarjetas-72-01.png);
+    background-size: cover;
     background-color: #111011; /*Indicamos color del fondo*/
     height: 410px; /*Indicamos el largo de la tarjeta. Si hay que agregar más info, podemos hacerla más larga desde acá*/
     padding: 20px 20px 0px 20px; /*El padding es interno al elemento y extiende el background, queda lindo para hacer botones o tarjetas*/

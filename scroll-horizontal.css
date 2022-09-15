@@ -21,8 +21,9 @@ e indicarle desde el archivo de GRID.CSS donde se va a ubicar dentro de la grill
     
 
 }
+
 .tarjetas { /*Esta es una SUB-GRID con la información de las tarjetas, no de sus elementos*/
-    background-image: url(img/tarjetas/fondo-tarjetas-72-01.png);
+    background-image: url(img/tarjetas/fondo-tarjetas.png);
     background-size: cover;
     background-color: #111011; /*Indicamos color del fondo*/
     height: 410px; /*Indicamos el largo de la tarjeta. Si hay que agregar más info, podemos hacerla más larga desde acá*/

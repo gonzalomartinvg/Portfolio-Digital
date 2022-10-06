@@ -4,16 +4,16 @@ A su vez, por el momento hay dos carruseles por lo que tenemos "wrapper-1" y "wr
 e indicarle desde el archivo de GRID.CSS donde se va a ubicar dentro de la grilla así no se pisa con ningún elemento.*/
 
 .wrapper-1{ /*Esta es una GRID que posee la información del contenedor de tarjetas, no de las tarjetas ni de sus elementos.*/
-    height: 510px; /*Le damos un tamaño para que entre todo el contenido de dentro*/
+    height: 490px; /*Le damos un tamaño para que entre todo el contenido de dentro*/
     display: grid; /*Le indicamos que es una Grid*/
-    grid-template-columns: repeat(5, 320px); /*Le decimos que son 2 elementos de 320px cada uno, si queremos agregar más tarjetas, debemos
+    grid-template-columns: repeat(6, 320px); /*Le decimos que son 2 elementos de 320px cada uno, si queremos agregar más tarjetas, debemos
     aumentar la cantidad de elementos*/
     overflow-x: auto; /*Le indicamos el scroll horizontal*/
 
 }
 
 .wrapper-2{ /*Esta es una GRID que posee la información del contenedor de tarjetas, no de las tarjetas ni de sus elementos.*/
-    height: 510px; /*Le damos un tamaño para que entre todo el contenido de dentro*/
+    height: 490px; /*Le damos un tamaño para que entre todo el contenido de dentro*/
     display: grid; /*Le indicamos que es una Grid*/
     grid-template-columns: repeat(9, 320px); /*Le decimos que son 9 elemenos de 320px cada uno, el tamaño es este ya que permite ver en pantalla de
     ordenador 4 tarjetas y media de una que indica que se puede scrollear*/

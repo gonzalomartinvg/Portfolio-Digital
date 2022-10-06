@@ -109,7 +109,7 @@
     .main .seccion-2 .wrapper-1{ /*Esta es una GRID que posee la información del contenedor de tarjetas, no de las tarjetas ni de sus elementos.*/
         height: 435px; /*Le damos un tamaño para que entre todo el contenido de dentro*/
         display: grid; /*Le indicamos que es una Grid*/
-        grid-template-columns: repeat(5, 260px); /*Le decimos que son 2 elementos de 320px cada uno, si queremos agregar más tarjetas, debemos
+        grid-template-columns: repeat(6, 260px); /*Le decimos que son 2 elementos de 320px cada uno, si queremos agregar más tarjetas, debemos
         aumentar la cantidad de elementos*/
         overflow-x: auto; /*Le indicamos el scroll horizontal*/
     

@@ -1,114 +1,311 @@
-body {
-    background-color: black;}
+/*SETEOS PRINCIPALES*/
 
-.informacion-superior-izquierda a{ /*Agregando la "a" estamos indicando que las propiedades se las aplique al elemento "a" dentro del div". Si no
-    hacemos esto no funciona*/
-    color: white;
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif; /*Se indica que use Poppins, pero en el caso de que no este disponible, que use Sans-Serif*/
-    font-weight: 600;
-    font-size: 100%;
+:root{
+    --primary-color: #8700A3;
+    --blanco-1: #ffff;
+    --blanco-2: #dadada;
+    --gris-1: #e6e3e3;
+    --gris-2: #1a1a1a;
+    --black: black;
 }
 
-.contacto-superior-derecho a{
-    color: white;
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 200;
-    font-size: 100%;
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    font-display: swap;
 }
 
-.background-header img{ /*Al indicarle 100%, le estamos diciendo que ocupé el 100% del contenedor en el que está inmerso. En este caso, va a ocupar
-    el 100% de las columnas y filas del contenedor que le especificamos en el archivo GRID.css*/
+body{
+    background-color: var(--black);
+}
+
+/*HEADER*/
+
+header{
     width: 100%;
-    height: 100%;
+    display: grid;
 }
 
-.encabezado {
-    color: white;
-    font-size: 200%;
-    font-family: 'Poppins', sans-serif;
-}
-
-.main .imagencircular img {
-    width:150px;
-    height:150px; 
+.contacto{
+    width: 90%;
     margin: auto;
-    display: table;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
-.aptitudes p {
+@media (max-width: 600px) {
+    .contacto{
+        grid-template-columns: 1fr;
+    }
+}
+
+.contenedor-contacto{
+    display: flex;
+    grid-gap: 0.5rem;
+    align-self: center;
+}
+
+@media (max-width: 600px) {
+    .contenedor-contacto{
+        justify-self: center;
+    }
+}
+
+
+.iconos-contacto{
+    font-size: 2rem;
+    color: var(--blanco-1);
+}
+
+.iconos-contacto:hover{
+    color: var(--blanco-2);
+}
+
+
+.titulo-header{
+    justify-self: end;
+    color: var(--blanco-1);
+    align-self: center;
+}
+
+@media (max-width: 600px) {
+    .titulo-header{
+        display: none;
+    }
+}
+
+.contacto-estilo:hover{
+    text-decoration: none;
+    color: var(--blanco-2);
+}
+
+.linkedin1{
+    justify-self: end;
+}
+
+.background-header{
+    width: 100%;
+}
+
+.background-header img{
+    width: 100%;
+}
+
+.titulo{
+    justify-self: center;
+    font-size: 2rem;
+    color: var(--blanco-1);
+}
+
+@media (max-width: 600px){
+    .titulo{
+        font-size: 1rem;
+    }
+  }
+
+/*SECCIÓN 1: Imagen y aptitudes*/
+
+.section-1{
+    width: 90%;
     margin: auto;
-    display:table; 
-    color:white; 
-    background-color:#8700A3; 
+    margin-top: 1rem;
+    display: grid;
+    grid-gap: 1.5rem;
+}
+
+.imagencircular{
+    width: 14rem;
+    justify-self: center;
+}
+
+@media (max-width: 600px){
+    .imagencircular{
+        width: 10rem;
+    }
+  }
+
+.aptitudes{
+    justify-self: center;
+    display: grid;
+    grid-gap: 1rem;
+}
+
+@media (min-width: 800px){
+    .aptitudes{
+        display: flex;   
+        grid-gap: 0.3rem;
+    }
+  }
+
+.aptitudes p{
+    width: fit-content;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    justify-self: center;
+    background-color: var(--primary-color) ;
+    color: var(--blanco-1);
+}
+
+.botonera{
+    justify-self: center;
+    display: flex;
+    grid-gap: 1rem;
+}
+
+.boton{
+    background-color: var(--blanco-1);
+    color: var(--black);
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+.boton:hover{
+    background-color: var(--blanco-2);
+}
+
+/*SECTION 2: "Tarjetas"*/
+
+.section-2{
+    margin-top: 1.5rem;
+}
+
+.titulos-tarjetas{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    color: var(--blanco-1);
+}
+
+@media (max-width: 600px){
+    .titulos-tarjetas{
+        font-size: 1.3rem;
+    }
+}
+
+/*Contenedor de tarjetas*/
+  
+  .contenedor-tarjetas {
+    display: flex;
+    margin: auto;
+    grid-gap: 1.5rem;
+    width: 90%;
+    overflow-x: auto; /*Indicamos el comportamiento del contenido que se desborda en el eje X*/
+    scroll-snap-type: x;
+    cursor: grab; /*Indica que el cursor sea la manito que agarra*/
+    scroll-behavior: smooth; /*Suaviza el scroll*/
+    scrollbar-width: none; /* elimina la barra de desplazamiento en firefox */
+  }
+  
+  .contenedor-tarjetas::-webkit-scrollbar { /* elimina la barra de desplazamiento en chrome*/
+    display: none;
+  }
+  
+  .contenedor-tarjeta-individual {
+    min-width: calc(17rem - .5rem);
+    height: 27rem;
+    padding: 1rem;
+    background-image: url(img/tarjetas/fondo-tarjetas.webp);
+    background-size: cover;
+    border-radius: 10px;
+    display: grid;
+    grid-gap: 0.5rem;
+    scroll-snap-align: start; /*Esto genera que cuando utilicemos el scroll, nos lleve al centro de este elemento. Probar con start y end para cambiar el efecto*/
+    user-select: none; /*Hacemos que el usuario no pueda seleccionar el texto, ya que si lo puede seleccionar al mantener presionado, atenta contra el efecto que le queremos dar de que haga scroll deslizando*/
+  }
+  
+  
+  @media (min-width: 1000px){
+    .contenedor-tarjeta-individual{
+        min-width: calc(20rem - .5rem);   
+        scroll-snap-align: center; 
+        height: 30rem;
+    }
+  }
+
+
+
+/*Contenido de tarjetas*/
+
+.imagen-proyecto{
+    width: 100%;
+    pointer-events: none;
+}
+
+.nombre-proyecto{
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--blanco-1);
+}
+
+@media (max-width: 1000px){
+    .nombre-proyecto{
+        font-size: 1.1rem;
+    }
+  }
+
+.tipo-de-proyecto{
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    font-style: italic;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-    font-family:'Poppins', sans-serif;
-    font-weight: 600;
-    font-style: italic; 
-    
+    color: var(--blanco-1);
+    background-color: var(--primary-color);
 }
 
-/* En el código de abajo, le indico a los elemenos de los DIV ".boton-whatsapp" y "boton-mail" creado en HTML que al clickear en un botón va a ser de una forma, 
-pero cuando pase el cursor de otra*/ 
-
-.boton-whatsapp a:link, a:visited {
-    margin: 5px; 
-    padding: 10px 10px;
-    background-color: white;
-    color: black;
-    border: 1px solid white; 
-    text-decoration: none; 
-    font-family: poppins; 
-    box-shadow: 3px 3px 3px black;
-}
-.boton-whatsapp a:hover, a:active {
-    background-color: #c9c8c9;
+.contenedor-botones{
+    width: 100%;
+    display: grid;
 }
 
-.boton-mail a:link, a:visited {
-    margin: 5px; 
-    padding: 10px 10px; 
-    background-color: white; 
-    color: black; 
-    text-decoration: none; 
-    font-family: poppins; 
-    box-shadow: 3px 3px 3px black;
-}
-.boton-mail a:hover, a:active {
-  background-color: #c9c8c9;
+.boton-tarjeta{
+    width: fit-content;
+    justify-self: end;
+    color: var(--blanco-1)
 }
 
-.titulo-diseno-ux-ui p{
-    width: fit-content; /*Con esto le indicamos que el background solo vaya hasta donde va el texto*/
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    font-size: 130%;
-    font-weight: 600;
-    background-color: #8700A3;
+.boton-tarjeta:hover{
+    color: var(--blanco-2);
+}
+
+/*FOOTER*/
+
+footer{
+    width: 100%;
+    display: grid;
+    grid-gap: 0.5rem;
+    margin-top: 2.5rem;
+    background-color: var(--gris-2);
+    padding: 1.5rem;
+    position: relative;
+    bottom: 0;
+}
+
+.contenedor-redes{
+    justify-self: center;
+    display: flex;
+    grid-gap: 1rem;
+}
+
+.iconos-redes{
+    font-size: 2rem;
+    color: var(--blanco-1);
+}
+
+.iconos-redes:hover{
+    color: var(--blanco-2);
+}
+
+.marca{
+    color: var(--blanco-1);
+    justify-self: center;
+    background-color: var(--primary-color);
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-}
-
-.titulo-produccion-audiovisual p {
-    width: fit-content; /*Con esto le indicamos que el background solo vaya hasta donde va el texto*/
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    font-size: 130%;
-    font-weight: 600;
-    background-color: #8700A3;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-}
-
-.contenedor-footer .iconos-redes img {
-    width: 130%;
-    height: 130%;
-}
-
-.contenedor-footer p{
-    font-size: 93%;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
 }

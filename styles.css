@@ -131,7 +131,7 @@ header{
 .aptitudes{
     justify-self: center;
     display: grid;
-    grid-gap: 1rem;
+    grid-gap: 0.5rem;
 }
 
 @media (min-width: 800px){

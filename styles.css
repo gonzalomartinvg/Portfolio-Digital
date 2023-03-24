@@ -199,9 +199,9 @@ header{
   
   .contenedor-tarjetas {
     display: flex;
-    margin: auto;
+    margin-left: 5%;
     grid-gap: 1.5rem;
-    width: 90%;
+    width: 95%;
     overflow-x: auto; /*Indicamos el comportamiento del contenido que se desborda en el eje X*/
     scroll-snap-type: x;
     cursor: grab; /*Indica que el cursor sea la manito que agarra*/

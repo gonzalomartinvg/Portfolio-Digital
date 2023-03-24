@@ -2,6 +2,7 @@
 
 :root{
     --primary-color: #8700A3;
+    --primary-color-hard: #480057;
     --blanco-1: #ffff;
     --blanco-2: #dadada;
     --gris-1: #e6e3e3;
@@ -149,12 +150,18 @@ header{
     }
   }
 
-.aptitudes p{
+.aptitudes a{
     width: fit-content;
+    text-decoration: none;
     padding-left: 1rem;
     padding-right: 1rem;
     justify-self: center;
     background-color: var(--primary-color) ;
+    color: var(--blanco-1);
+}
+
+.aptitudes a:hover{
+    background-color: var(--primary-color-hard) ;
     color: var(--blanco-1);
 }
 

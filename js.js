@@ -1,32 +1,18 @@
 //OBJETO
 
 const proyectosweb = {
-    
-    "fotball-simulator":[
+
+    "backend-socios-afa-casla":[
         {
-            "nombre": "Football Simulator",
+            "nombre": "Socios AFA/CASLA",
 
-            "tipo": "Desarrollo Web y Móvil",
+            "tipo": "Backend + Frontend",
 
-            "imagen": "img/tarjetas/football-simulator.webp",    
+            "imagen": "img/tarjetas/afa-sanlorenzo.webp",    
 
-            "urlweb": "https://gonzalomartinvg.github.io/football-simulator-2022/",
+            "urlweb": "https://www.gonzalomartinvg.com/loginSANLORENZO/",
 
-            "urlrepositorio": "https://github.com/gonzalomartinvg/football-simulator-2022"
-        }
-    ],
-
-    "tienda-online-casla":[
-        {
-            "nombre": "Tienda online CASLA",
-
-            "tipo": "Desarrollo Web y Móvil",
-
-            "imagen": "img/tarjetas/sanlo.webp",    
-
-            "urlweb": "https://gonzalomartinvg.github.io/tienda-san-lorenzo/",
-
-            "urlrepositorio": "https://github.com/gonzalomartinvg/tienda-san-lorenzo"
+            "urlrepositorio": "https://github.com/gonzalomartinvg/loginSANLORENZO"
         }
     ],
 
@@ -44,6 +30,34 @@ const proyectosweb = {
         }
     ],
 
+    "gonza-viaja":[
+        {
+            "nombre": "Gonza Viaja",
+
+            "tipo": "Desarrollo Web y Móvil",
+
+            "imagen": "img/tarjetas/gonzaviaja.webp",    
+
+            "urlweb": "https://gonzaviaja.com/",
+
+            "urlrepositorio": "https://github.com/gonzalomartinvg/gonza-viaja"
+        }
+    ],
+
+    "tienda-online-casla":[
+        {
+            "nombre": "Tienda online CASLA",
+
+            "tipo": "Desarrollo Web y Móvil",
+
+            "imagen": "img/tarjetas/sanlo.webp",    
+
+            "urlweb": "https://gonzalomartinvg.github.io/tienda-san-lorenzo/",
+
+            "urlrepositorio": "https://github.com/gonzalomartinvg/tienda-san-lorenzo"
+        }
+    ],
+
     "corcho":[
         {
             "nombre": "Corcho",
@@ -58,17 +72,17 @@ const proyectosweb = {
         }
     ],
 
-    "gonza-viaja":[
+    "fotball-simulator":[
         {
-            "nombre": "Gonza Viaja",
+            "nombre": "Football Simulator",
 
             "tipo": "Desarrollo Web y Móvil",
 
-            "imagen": "img/tarjetas/gonzaviaja.webp",    
+            "imagen": "img/tarjetas/football-simulator.webp",    
 
-            "urlweb": "https://gonzaviaja.com/",
+            "urlweb": "https://gonzalomartinvg.github.io/football-simulator-2022/",
 
-            "urlrepositorio": "https://github.com/gonzalomartinvg/gonza-viaja"
+            "urlrepositorio": "https://github.com/gonzalomartinvg/football-simulator-2022"
         }
     ],
 
@@ -261,9 +275,9 @@ function mostradorTarjetas(a, b){
     let urlRepositorioProyecto = ""
     let todosLoscontenedoresTarjetas = document.querySelectorAll(".contenedor-tarjetas"); //Usamos un selector ALL, porque en la home hay más de un contenedor con la clase ".contenedor-relacionados"
 
-    todosLoscontenedoresTarjetas.forEach(element => { //Con el foreach recorremos el array que surge del querySelectorAll y a cada uno le indicamos que ejecute la función según el "identificadorpais2"
+    todosLoscontenedoresTarjetas.forEach(element => { //Con el foreach recorremos el array que surge del querySelectorAll y a cada uno le indicamos que ejecute la función según el "identificadortipo"
 
-        if (element.dataset.identificadortipo == b){ //Con este condicional evitamos que aparezca en el listado los botones de destinos de otros países.
+        if (element.dataset.identificadortipo == b){ //Con este condicional evitamos que aparezcan tarjetas en secciones que no corresponden. Ejemplo, que en el de desarrollo web no aparezca algo visual
 
             for (prop in a){
                 
@@ -325,7 +339,7 @@ const contenedorTarjetas = document.querySelectorAll('.contenedor-tarjetas') //S
 
 const contenedorImagen = document.querySelectorAll('.imagen-proyecto')
 
-contenedorTarjetas.forEach(element => { //Con el foreach recorremos el array que surge del querySelectorAll y a cada uno le indicamos que ejecute la función según el "identificadorpais"
+contenedorTarjetas.forEach(element => {
 
         let pressed = false
         let startX = 0
